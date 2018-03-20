@@ -1,4 +1,3 @@
-
 (require 'package)
 (setq package-enable-at-startup nil)
 
@@ -20,7 +19,7 @@
         (require-package package min-version t)))))
 
 
-;; Install all missing packages.
+;; install packages
 (require-package 'use-package)
 (require-package 'undo-tree)
 (require-package 'evil)
@@ -29,11 +28,10 @@
 (require-package 'evil-lisp-state)
 (require-package 'which-key)
 (require-package 'bind-map)
-(require-package 'general)
 (require-package 'smartparens)
 (require-package 'company)
 
-;; Now load all packages.
+;; load packages
 (package-initialize)
 
 

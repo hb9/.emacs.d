@@ -1,4 +1,3 @@
-
 (use-package color-theme-sanityinc-tomorrow
   :ensure t
   :config
