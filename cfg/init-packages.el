@@ -30,6 +30,7 @@
 (require-package 'bind-map)
 (require-package 'smartparens)
 (require-package 'company)
+(require-package 'diminish)
 
 ;; load packages
 (package-initialize)
