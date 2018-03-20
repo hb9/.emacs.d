@@ -1,0 +1,11 @@
+alias l ls -lh $*
+alias ll ls -lhA $*
+alias l1 ls -1 -D $*
+alias ff find-file $1
+alias fw find-file-other-window $1
+alias md mkdir
+alias d dired $1
+alias ...... cd ../../../../..
+alias ..... cd ../../../..
+alias .... cd ../../..
+alias ... cd ../..
