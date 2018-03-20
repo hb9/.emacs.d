@@ -1,4 +1,6 @@
 /auto-save-list/*
 /elpa/*
-/eshell/*
+/eshell/history
+/eshell/lastdir
 /ido.last
+/custom.el
