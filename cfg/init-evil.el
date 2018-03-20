@@ -22,5 +22,14 @@
   :config
   (evil-lisp-state-leader "SPC k"))
 
+(use-package evil-anzu
+  :init (global-anzu-mode t)
+  :diminish 'anzu-mode
+  :config
+  (setq anzu-search-threshold 1000))
+
+(use-package evil-surround
+  :config
+  (global-evil-surround-mode 1))
 
 (provide 'init-evil)
