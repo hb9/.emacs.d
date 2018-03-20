@@ -30,6 +30,8 @@
 
 (use-package evil-surround
   :config
-  (global-evil-surround-mode 1))
+  (global-evil-surround-mode 1)
+  (general-define-key :keymaps hb9/global-evil-key-maps
+                      "s" 'evil-surround-region))
 
 (provide 'init-evil)
