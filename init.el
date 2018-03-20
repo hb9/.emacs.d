@@ -30,6 +30,7 @@
 (require 'init-evil)
 (require 'init-editing)
 (require 'init-windows)
+(require 'init-dired)
 (require 'init-eshell)
 
 ;; configure packages
@@ -40,3 +41,6 @@
 
 ;; load misc stuff
 (require 'misc-functions)
+
+;; global bindings
+(require 'init-bindings)

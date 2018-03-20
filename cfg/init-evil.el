@@ -1,3 +1,5 @@
+(require 'which-key)
+
 (use-package evil
   :config
   (evil-mode 1)
@@ -11,16 +13,33 @@
     (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up)))
 
 (use-package evil-nerd-commenter
-  :config
   :bind (:map hb9/space-leader-map
               ("c l" . evilnc-comment-or-uncomment-lines)
               ("c y" . evilnc-copy-and-comment-operator)
-              ("," . evilnc-comment-operator)))
+              ("c c" . evilnc-comment-operator))
+  :init
+  (which-key-add-key-based-replacements
+    ;; SPC
+    "SPC c" "comment"
+    ;; M-m
+    "M-m c" "comment"))
+
 
 (use-package evil-lisp-state
   :init (setq evil-lisp-state-global t)
   :config
-  (evil-lisp-state-leader "SPC k"))
+  ;; Dont use any leader. Instead use an arkward binding and trigger
+  ;; that via 'unread-command-events'. This workaround solves some
+  ;; problems in dired mode.
+  (evil-lisp-state-leader "C-#")
+  (bind-map-set-keys hb9/space-leader-map
+    "k" '(lambda () (interactive)
+           (setq unread-command-events (listify-key-sequence (kbd "C-#")))))
+  (which-key-add-key-based-replacements
+    ;; SPC
+    "SPC k" "lispy"
+    ;; M-m
+    "M-m k" "lispy"))
 
 (use-package evil-anzu
   :init (global-anzu-mode t)
