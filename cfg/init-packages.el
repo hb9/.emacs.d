@@ -28,6 +28,7 @@
 (require-package 'evil-nerd-commenter)
 (require-package 'evil-lisp-state)
 (require-package 'which-key)
+(require-package 'winum)
 (require-package 'bind-map)
 (require-package 'general)
 (require-package 'smartparens)

@@ -29,6 +29,7 @@
 (require 'init-keys)
 (require 'init-evil)
 (require 'init-editing)
+(require 'init-windows)
 (require 'init-eshell)
 
 ;; configure packages
