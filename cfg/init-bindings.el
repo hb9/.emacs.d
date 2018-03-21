@@ -19,10 +19,10 @@
  "jD" '(dired-jump-other-window :which-key "rename buffer")
  "ji" '(counsel-imenu :which-key "imenu")
  "jw" '(webjump :which-key "webjump")
- ;; "j P" '(lambda ()
- ;;          (interactive) (counsel-dired-jump "" "~/projects"))
- ;; "j C" '(lambda ()
- ;;          (interactive) (counsel-dired-jump "" "~/cloud"))
+ "jP" '(lambda ()
+         (interactive) (counsel-dired-jump "" hb9/projects-dir))
+ "jC" '(lambda ()
+         (interactive) (counsel-dired-jump "" hb9/cloud-dir))
 
  ;; files
  "f" '(:ignore t :which-key "files")

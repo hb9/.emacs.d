@@ -13,7 +13,7 @@
 (add-to-list 'load-path (expand-file-name "cfg" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "misc" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "elpa" user-emacs-directory))
-;; (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "../.emacs_private" user-emacs-directory))
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
   (when (file-exists-p custom-file)
@@ -42,6 +42,9 @@
 
 ;; load misc stuff
 (require 'misc-functions)
+
+;; load private data
+(require 'private-cfg)
 
 ;; global bindings
 (require 'init-bindings)

@@ -12,4 +12,8 @@
         ivy-re-builders-alist '((swiper . ivy--regex-plus) (t . ivy--regex-fuzzy))
         ivy-use-virtual-buffers t))
 
+(use-package swiper
+  :config
+  (global-set-key "\C-s" 'swiper))
+
 (provide 'init-ivy)
