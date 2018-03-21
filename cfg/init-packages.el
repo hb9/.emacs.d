@@ -40,8 +40,11 @@
 (require-package 'swiper)
 (require-package 'hydra)
 (require-package 'ivy-hydra)
+(require-package 'dired-hacks-utils)
+(require-package 'dired-filter)
+(require-package 'dired-narrow)
+(require-package 'dired-subtree)
 (require-package 'doom-themes)
-
 
 ;; load packages
 (package-initialize)

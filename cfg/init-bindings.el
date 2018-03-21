@@ -31,7 +31,7 @@
  ;; buffers
  "b" '(:ignore t :which-key "buffers")
  "bb" '(counsel-ibuffer :which-key "switch-to-buffer")
- "bk" '(kill-this-buffer :which-key "kill-buffer")
+ "bd" '(kill-this-buffer :which-key "kill-buffer")
 
  ;; help 
  "h" '(:ignore t :which-key "help")
