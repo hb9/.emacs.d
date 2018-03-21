@@ -35,6 +35,7 @@
 (require-package 'smartparens)
 (require-package 'company)
 (require-package 'diminish)
+(require-package 'doom-themes)
 
 ;; load packages
 (package-initialize)

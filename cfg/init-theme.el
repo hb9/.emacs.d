@@ -1,7 +1,7 @@
-(use-package color-theme-sanityinc-tomorrow
-  :ensure t
+(use-package doom-themes
   :config
-  (load-theme 'sanityinc-tomorrow-eighties)
+  (load-theme 'doom-one t)
+  (doom-themes-org-config)
   (set-face-attribute
    'default nil
    :font "-ADBO-Source Code Pro-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
