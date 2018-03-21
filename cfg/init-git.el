@@ -34,7 +34,7 @@
    "ghc" '(smeargle-clear :which-key "clear")))
 
 (use-package git-gutter-fringe+
-  :diminish git-gutter-mode
+  :diminish git-gutter+-mode
   :config
   (fringe-helper-define 'git-gutter-fr+-added nil
     "..X...."

@@ -8,4 +8,6 @@
 (setq-default
  make-backup-files nil)
 
+(diminish 'auto-revert-mode)
+
 (provide 'init-defaults)
