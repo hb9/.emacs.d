@@ -39,10 +39,11 @@
   (setq anzu-search-threshold 1000))
 
 (use-package evil-surround
+  :commands evil-surround-region
   :config
   (global-evil-surround-mode 1)
   :general
   (:keymaps 'visual
-   "s" '(evil-surround-region :which-key "comment")))
+   "s" '(evil-surround-region :which-key "surround")))
 
 (provide 'init-evil)

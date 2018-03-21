@@ -17,8 +17,8 @@
  "jB" '(bookmark-set :which-key "bookmark set")
  "jd" '(dired-jump :which-key "dired jump")
  "jD" '(dired-jump-other-window :which-key "rename buffer")
- ;; "j i" 'counsel-imenu
- "j w" 'webjump
+ "ji" '(counsel-imenu :which-key "imenu")
+ "jw" '(webjump :which-key "webjump")
  ;; "j P" '(lambda ()
  ;;          (interactive) (counsel-dired-jump "" "~/projects"))
  ;; "j C" '(lambda ()
@@ -26,13 +26,19 @@
 
  ;; files
  "f" '(:ignore t :which-key "files")
- "ff" '(find-file :which-key "find file")
+ "ff" '(counsel-find-file :which-key "find file")
 
  ;; buffers
  "b" '(:ignore t :which-key "buffers")
- "bb" '(switch-to-buffer :which-key "switch-to-buffer")
+ "bb" '(counsel-ibuffer :which-key "switch-to-buffer")
+ "bk" '(kill-this-buffer :which-key "kill-buffer")
 
  ;; help 
- )
+ "h" '(:ignore t :which-key "help")
+ "hv" '(counsel-describe-variable :which-key "describe variable")
+ "hf" '(counsel-describe-function :which-key "describe function")
+ "hm" '(describe-mode :which-key "describe mode")
+ "hb" '(counsel-descbinds :which-key "describe bindings")
+ "ht" '(which-key-show-top-level :which-key "top level bindings"))
 
 (provide 'init-bindings)

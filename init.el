@@ -30,6 +30,7 @@
 (require 'init-evil)
 (require 'init-editing)
 (require 'init-windows)
+(require 'init-ivy)
 (require 'init-dired)
 (require 'init-eshell)
 

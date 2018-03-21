@@ -35,7 +35,13 @@
 (require-package 'smartparens)
 (require-package 'company)
 (require-package 'diminish)
+(require-package 'flx)
+(require-package 'counsel)
+(require-package 'swiper)
+(require-package 'hydra)
+(require-package 'ivy-hydra)
 (require-package 'doom-themes)
+
 
 ;; load packages
 (package-initialize)
