@@ -13,33 +13,24 @@
     (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up)))
 
 (use-package evil-nerd-commenter
-  :bind (:map hb9/space-leader-map
-              ("c l" . evilnc-comment-or-uncomment-lines)
-              ("c y" . evilnc-copy-and-comment-operator)
-              ("c c" . evilnc-comment-operator))
-  :init
-  (which-key-add-key-based-replacements
-    ;; SPC
-    "SPC c" "comment"
-    ;; M-m
-    "M-m c" "comment"))
-
+  :commands
+  evilnc-comment-operator
+  evilnc-copy-and-comment-operator
+  :general
+  (:states '(normal visual)
+   :prefix hb9/leader-1
+   :keymaps 'override
+   "c" '(:ignore t :which-key "comment")
+   "cc" '(evilnc-comment-operator :which-key "comment operator")
+   "cy" '(evilnc-copy-and-comment-operator :which-key "copy-comment operator")
+   "cl" '(evilnc-comment-or-uncomment-lines :which-key "(un)comment lines")))
 
 (use-package evil-lisp-state
   :init (setq evil-lisp-state-global t)
   :config
-  ;; Dont use any leader. Instead use an arkward binding and trigger
-  ;; that via 'unread-command-events'. This workaround solves some
-  ;; problems in dired mode.
-  (evil-lisp-state-leader "C-#")
-  (bind-map-set-keys hb9/space-leader-map
-    "k" '(lambda () (interactive)
-           (setq unread-command-events (listify-key-sequence (kbd "C-#")))))
+  (evil-lisp-state-leader "SPC k")
   (which-key-add-key-based-replacements
-    ;; SPC
-    "SPC k" "lispy"
-    ;; M-m
-    "M-m k" "lispy"))
+    "SPC k" "lisp-state"))
 
 (use-package evil-anzu
   :init (global-anzu-mode t)
@@ -50,7 +41,8 @@
 (use-package evil-surround
   :config
   (global-evil-surround-mode 1)
-  (general-define-key :keymaps hb9/global-evil-key-maps
-                      "s" 'evil-surround-region))
+  :general
+  (:keymaps 'visual
+   "s" '(evil-surround-region :which-key "comment")))
 
 (provide 'init-evil)
