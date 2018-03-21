@@ -37,6 +37,7 @@
 (require 'init-ivy)
 (require 'init-company)
 (require 'init-git)
+(require 'init-org)
 
 ;; visual appearence
 (require 'init-theme)

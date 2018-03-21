@@ -1,5 +1,6 @@
 (require 'bind-map)
 (require 'which-key)
+(require 'private-cfg)
 
 ;; dired-mode overrides evil-keymaps
 ;; @see https://github.com/noctuid/general.el/issues/99
@@ -19,10 +20,17 @@
  "jD" '(dired-jump-other-window :which-key "rename buffer")
  "ji" '(counsel-imenu :which-key "imenu")
  "jw" '(webjump :which-key "webjump")
- "jP" '(lambda ()
-         (interactive) (counsel-dired-jump "" hb9/projects-dir))
- "jC" '(lambda ()
-         (interactive) (counsel-dired-jump "" hb9/cloud-dir))
+ "jP" '((lambda ()
+          (interactive) (counsel-dired-jump "" hb9/projects-dir))
+        :which-key "projects")
+ "jC" '((lambda ()
+          (interactive) (counsel-dired-jump "" hb9/cloud-dir))
+        :which-key "cloud")
+
+ ;; searching
+ "s" '(:ignore t :which-key "search")
+ "sW" '((lambda ()
+          (interactive) (counsel-ag "" hb9/wiki-dir)) :which-key "wiki")
 
  ;; files
  "f" '(:ignore t :which-key "files")
@@ -37,6 +45,8 @@
  "a" '(:ignore t :which-key "apps")
  "am" '(mu4e :which-key "mu4e")
  "ac" '(calc :which-key "calc")
+ "ao" '(org-agenda :which-key "org agenda")
+ "aC" '(org-capture :which-key "org capture")
 
  ;; help 
  "h" '(:ignore t :which-key "help")
