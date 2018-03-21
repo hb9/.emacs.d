@@ -63,5 +63,31 @@ they are appended."
   (let ((inhibit-read-only t))
     (erase-buffer)))
 
+(defun hb9/eshell-kill-input ()
+  (interactive)
+  (evil-goto-line)
+  (evil-append-line nil)
+  (eshell-kill-input))
+
+(defun hb9/eshell-goto-end ()
+  (interactive)
+  (evil-goto-line)
+  (evil-append-line nil))
+
+(with-eval-after-load 'esh-opt
+  (add-hook 'eshell-mode-hook
+            (lambda ()
+              (evil-define-key 'insert eshell-mode-map
+                (kbd "<tab>") 'completion-at-point)
+              (evil-define-key 'insert eshell-mode-map
+                (kbd "M-c") 'counsel-esh-history)
+              (evil-define-key 'insert eshell-mode-map
+                (kbd "C-g") 'hb9/eshell-kill-input)
+              (evil-define-key 'insert eshell-mode-map
+                (kbd "C-a") 'eshell-bol)
+              (evil-define-key 'insert eshell-mode-map
+                (kbd "C-e") 'end-of-line)
+              (evil-define-key 'normal eshell-mode-map
+                (kbd "G") 'hb9/eshell-goto-end))))
 
 (provide 'init-eshell)
