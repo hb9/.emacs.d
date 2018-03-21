@@ -46,6 +46,11 @@
 (require-package 'dired-filter)
 (require-package 'dired-narrow)
 (require-package 'dired-subtree)
+(require-package 'git-commit)
+(require-package 'magit)
+(require-package 'smeargle)
+(require-package 'git-gutter-fringe+)
+(require-package 'evil-magit)
 (require-package 'doom-themes)
 
 ;; load packages

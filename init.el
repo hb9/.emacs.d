@@ -30,12 +30,13 @@
 (require 'init-evil)
 (require 'init-editing)
 (require 'init-windows)
-(require 'init-ivy)
 (require 'init-dired)
 (require 'init-eshell)
 
 ;; configure packages
+(require 'init-ivy)
 (require 'init-company)
+(require 'init-git)
 
 ;; visual appearence
 (require 'init-theme)
