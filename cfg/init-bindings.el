@@ -33,6 +33,11 @@
  "bb" '(counsel-ibuffer :which-key "switch-to-buffer")
  "bd" '(kill-this-buffer :which-key "kill-buffer")
 
+ ;; app
+ "a" '(:ignore t :which-key "apps")
+ "am" '(mu4e :which-key "mu4e")
+ "ac" '(calc :which-key "calc")
+
  ;; help 
  "h" '(:ignore t :which-key "help")
  "hv" '(counsel-describe-variable :which-key "describe variable")

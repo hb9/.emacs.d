@@ -66,4 +66,7 @@
 ;; (setq evil-magit-use-y-for-yank nil)
 (require 'evil-magit)
 
+;; for some reason auto-revert-mode is triggered here somewhere...
+(diminish 'auto-revert-mode)
+
 (provide 'init-git)
