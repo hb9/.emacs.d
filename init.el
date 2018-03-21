@@ -38,6 +38,8 @@
 (require 'init-company)
 (require 'init-git)
 (require 'init-org)
+(require 'init-spelling)
+(require 'init-web)
 
 ;; visual appearence
 (require 'init-theme)

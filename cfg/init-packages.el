@@ -51,6 +51,7 @@
 (require-package 'smeargle)
 (require-package 'git-gutter-fringe+)
 (require-package 'evil-magit)
+(require-package 'eww-lnum)
 (require-package 'doom-themes)
 
 ;; load packages

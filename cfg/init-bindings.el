@@ -35,6 +35,7 @@
  ;; files
  "f" '(:ignore t :which-key "files")
  "ff" '(counsel-find-file :which-key "find file")
+ "fr" '(counsel-recentf :which-key "recent file")
 
  ;; buffers
  "b" '(:ignore t :which-key "buffers")
@@ -47,6 +48,10 @@
  "ac" '(calc :which-key "calc")
  "ao" '(org-agenda :which-key "org agenda")
  "aC" '(org-capture :which-key "org capture")
+
+ ;; toggle
+ "t" '(:ignore t :which-key "toggle")
+ "tS" '(flyspell-mode :which-key "spelling")
 
  ;; help 
  "h" '(:ignore t :which-key "help")
