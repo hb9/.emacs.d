@@ -28,6 +28,7 @@
 (require-package 'evil-anzu)
 (require-package 'evil-nerd-commenter)
 (require-package 'evil-lisp-state)
+(require-package 'expand-region)
 (require-package 'which-key)
 (require-package 'winum)
 (require-package 'bind-map)
@@ -52,7 +53,10 @@
 (require-package 'git-gutter-fringe+)
 (require-package 'evil-magit)
 (require-package 'eww-lnum)
+(require-package 'projectile)
+(require-package 'ag)
 (require-package 'doom-themes)
+(require-package 'nyan-mode)
 
 ;; load packages
 (package-initialize)

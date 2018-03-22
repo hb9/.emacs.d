@@ -31,6 +31,7 @@
  "s" '(:ignore t :which-key "search")
  "sW" '((lambda ()
           (interactive) (counsel-ag "" hb9/wiki-dir)) :which-key "wiki")
+ "sa" '(counsel-ag :which-key "counsel ag")
 
  ;; files
  "f" '(:ignore t :which-key "files")
@@ -48,6 +49,15 @@
  "ac" '(calc :which-key "calc")
  "ao" '(org-agenda :which-key "org agenda")
  "aC" '(org-capture :which-key "org capture")
+
+ ;; project
+ "p" '(:ignore t :which-key "project")
+ "pa" '(projectile-ag :which-key "projectile ag")
+ "ps" '(counsel-git-grep :which-key "git grep")
+ "pf" '(projectile-find-file :which-key "find file")
+ "pb" '(projectile-switch-to-buffer :which-key "switch buffer")
+ "pd" '(projectile-dired :which-key "dired")
+ "pD" '(ag-project-dired :which-key "project dired")
 
  ;; toggle
  "t" '(:ignore t :which-key "toggle")

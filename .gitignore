@@ -6,3 +6,6 @@
 /custom.el
 /recentf
 /url/*
+*.eld
+/projectile.cache
+/bookmarks

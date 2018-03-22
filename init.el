@@ -32,6 +32,7 @@
 (require 'init-windows)
 (require 'init-dired)
 (require 'init-eshell)
+(require 'init-search)
 
 ;; configure packages
 (require 'init-ivy)
@@ -40,6 +41,7 @@
 (require 'init-org)
 (require 'init-spelling)
 (require 'init-web)
+(require 'init-projectile)
 
 ;; visual appearence
 (require 'init-theme)
