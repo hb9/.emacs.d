@@ -16,8 +16,8 @@
  "j" '(:ignore t :which-key "jump")
  "jb" '(bookmark-jump :which-key "bookmark jump")
  "jB" '(bookmark-set :which-key "bookmark set")
- "jd" '(dired-jump :which-key "dired jump")
- "jD" '(dired-jump-other-window :which-key "rename buffer")
+ "jd" '(dired-jump :which-key "diredjump")
+ "jD" '(dired-jump-other-window :which-key "diredjump wnd")
  "ji" '(counsel-imenu :which-key "imenu")
  "jw" '(webjump :which-key "webjump")
  "jP" '((lambda ()
@@ -31,7 +31,9 @@
  "s" '(:ignore t :which-key "search")
  "sW" '((lambda ()
           (interactive) (counsel-ag "" hb9/wiki-dir)) :which-key "wiki")
- "sa" '(counsel-ag :which-key "counsel ag")
+ "sg" '(counsel-rg :which-key "counsel rg")
+ "sG" '(grep :which-key "plain grep")
+ "sd" '(find-grep-dired :which-key "find grep dired")
 
  ;; files
  "f" '(:ignore t :which-key "files")
@@ -56,8 +58,7 @@
  "ps" '(counsel-git-grep :which-key "git grep")
  "pf" '(projectile-find-file :which-key "find file")
  "pb" '(projectile-switch-to-buffer :which-key "switch buffer")
- "pd" '(projectile-dired :which-key "dired")
- "pD" '(ag-project-dired :which-key "project dired")
+ "pr" '(projectile-dired :which-key "root folder")
 
  ;; toggle
  "t" '(:ignore t :which-key "toggle")

@@ -58,6 +58,7 @@
 (require-package 'eww-lnum)
 (require-package 'projectile)
 (require-package 'ag)
+(require-package 'wgrep)
 (require-package 'doom-themes)
 (require-package 'nyan-mode)
 
