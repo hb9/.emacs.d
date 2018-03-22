@@ -1,5 +1,3 @@
-;; define some places first
-
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -7,6 +5,7 @@
 ;; You may delete these explanatory comments.
 ;; (package-initialize)
 
+;; define some places first
 (setq user-init-file (or load-file-name (buffer-file-name)))
 (setq user-emacs-directory (file-name-directory user-init-file))
 

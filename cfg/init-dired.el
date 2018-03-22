@@ -31,8 +31,7 @@
   :general
   (:keymaps 'dired-mode-map
    :prefix hb9/leader-2
-   "/" '(dired-narrow-fuzzy :which-key "narrow fuzzy")
-   ))
+   "/" '(dired-narrow-fuzzy :which-key "narrow fuzzy")))
 
 (use-package dired-filter
   :defer t

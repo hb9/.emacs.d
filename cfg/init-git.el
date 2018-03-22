@@ -1,4 +1,6 @@
 (use-package magit
+  ;; {{ taken from Howard Abrams
+  ;; license: (CC BY 3.0)
   :commands magit-status magit-blame
   :init
   (defadvice magit-status (around magit-fullscreen activate)
@@ -12,6 +14,7 @@
         ;; magit-push-always-verify nil
         ;; Get rid of the previous advice to go into fullscreen
         magit-restore-window-configuration t)
+  ;; }}
 
   :bind ("C-x g" . magit-status)
   :general

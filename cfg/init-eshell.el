@@ -33,6 +33,35 @@
 (add-hook 'eshell-mode-hook 'hb9/add-shell)
 (add-hook 'eshell-exit-hook 'hb9/remove-shell)
 
+(defun hb9/eshell-kill-input ()
+  (interactive)
+  (evil-goto-line)
+  (evil-append-line nil)
+  (eshell-kill-input))
+
+(defun hb9/eshell-goto-end ()
+  (interactive)
+  (evil-goto-line)
+  (evil-append-line nil))
+
+(with-eval-after-load 'esh-opt
+  (add-hook 'eshell-mode-hook
+            (lambda ()
+              (evil-define-key 'insert eshell-mode-map
+                (kbd "<tab>") 'completion-at-point)
+              (evil-define-key 'insert eshell-mode-map
+                (kbd "M-c") 'counsel-esh-history)
+              (evil-define-key 'insert eshell-mode-map
+                (kbd "C-g") 'hb9/eshell-kill-input)
+              (evil-define-key 'insert eshell-mode-map
+                (kbd "C-a") 'eshell-bol)
+              (evil-define-key 'insert eshell-mode-map
+                (kbd "C-e") 'end-of-line)
+              (evil-define-key 'normal eshell-mode-map
+                (kbd "G") 'hb9/eshell-goto-end))))
+
+;; {{ taken from Howard Abrams
+;; @see http://howardism.org/Technical/Emacs/eshell-present.html
 (defun eshell/-buffer-as-args (buffer separator command)
   "Takes the contents of BUFFER, and splits it on SEPARATOR, and
 runs the COMMAND with the contents as arguments. Use an argument
@@ -62,32 +91,6 @@ they are appended."
   (interactive)
   (let ((inhibit-read-only t))
     (erase-buffer)))
-
-(defun hb9/eshell-kill-input ()
-  (interactive)
-  (evil-goto-line)
-  (evil-append-line nil)
-  (eshell-kill-input))
-
-(defun hb9/eshell-goto-end ()
-  (interactive)
-  (evil-goto-line)
-  (evil-append-line nil))
-
-(with-eval-after-load 'esh-opt
-  (add-hook 'eshell-mode-hook
-            (lambda ()
-              (evil-define-key 'insert eshell-mode-map
-                (kbd "<tab>") 'completion-at-point)
-              (evil-define-key 'insert eshell-mode-map
-                (kbd "M-c") 'counsel-esh-history)
-              (evil-define-key 'insert eshell-mode-map
-                (kbd "C-g") 'hb9/eshell-kill-input)
-              (evil-define-key 'insert eshell-mode-map
-                (kbd "C-a") 'eshell-bol)
-              (evil-define-key 'insert eshell-mode-map
-                (kbd "C-e") 'end-of-line)
-              (evil-define-key 'normal eshell-mode-map
-                (kbd "G") 'hb9/eshell-goto-end))))
+;; }}
 
 (provide 'init-eshell)

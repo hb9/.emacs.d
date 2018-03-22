@@ -8,7 +8,9 @@
 ;; Initialize, but don't load installed packages yet.
 (package-initialize t)
 
-;; taken from Steve Purcell
+;; {{ taken from Steve Purcell
+;; Copyright (c) 2006-2017, Steve Purcell
+;; All rights reserved.
 (defun require-package (package &optional min-version no-refresh)
   "Ask elpa to install given PACKAGE."
   (if (package-installed-p package min-version)
@@ -18,6 +20,7 @@
       (progn
         (package-refresh-contents)
         (require-package package min-version t)))))
+;; }}
 
 
 ;; install packages
