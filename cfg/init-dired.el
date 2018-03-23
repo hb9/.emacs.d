@@ -14,7 +14,8 @@
 (use-package dired-x
   :after dired
   :config
-  (setq-default dired-omit-files-p t)
+  (setq-default dired-omit-files-p t
+                dired-omit-verbose nil)
   (setq
    dired-listing-switches "-alhv"
    dired-omit-files "^\\.\\|^#.#$\\|.~$"))

@@ -9,3 +9,20 @@ The packages that build the backbone of this configuration are: [use-package](ht
 # Installation
 
 I do not recommend to install this config. Some variables used in this config (to define places and files) are defined in a private file, which is not a part of this repo. If you are inclined to use this config anyway you must deal with those variables first. Most of them are used in `cfg/init-org.el` and some in `cfg/init-bindings.el`.
+
+# Dependencies
+
+Here are some dependencies, which are not obvious like `git` and `python`.
+
+## GNU/Linux packages
+
+* `silversearcher-ag`
+* `ripgrep`
+
+## python packages
+
+one-liner taken from elpy: `pip install jedi flake8 autopep8 yapf`
+
+## fonts
+
+* Adobe Source Code Pro

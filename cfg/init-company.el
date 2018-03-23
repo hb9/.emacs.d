@@ -4,7 +4,10 @@
         ("C-j" . company-select-next)
         ("C-k" . company-select-previous))
   :init
-  (setq company-dabbrev-ignore-case t)
+  (setq company-dabbrev-ignore-case nil
+        company-dabbrev-downcase nil
+        company-show-numbers t
+        company-idle-delay 0.2)
   (add-hook 'after-init-hook 'global-company-mode)
   :diminish company-mode)
 

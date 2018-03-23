@@ -10,6 +10,7 @@
 (setq user-emacs-directory (file-name-directory user-init-file))
 
 (add-to-list 'load-path (expand-file-name "cfg" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "cfg/lang" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "misc" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "elpa" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "../.emacs_private" user-emacs-directory))
@@ -41,6 +42,9 @@
 (require 'init-spelling)
 (require 'init-web)
 (require 'init-projectile)
+
+;; languages
+(require 'lang-python)
 
 ;; visual appearence
 (require 'init-theme)

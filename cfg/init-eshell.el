@@ -1,5 +1,6 @@
-(setq eshell-aliases-file (expand-file-name "eshell/eshell_aliases.txt" user-emacs-directory))
-(setq eshell-buffer-maximum-lines 20000)
+(setq eshell-aliases-file
+      (expand-file-name "eshell/eshell_aliases.txt" user-emacs-directory)
+      eshell-buffer-maximum-lines 20000)
 (setq hb9/shell-counter 0)
 
 (defun hb9/shell-naming ()

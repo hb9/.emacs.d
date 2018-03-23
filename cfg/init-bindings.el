@@ -45,7 +45,7 @@
  "bb" '(counsel-ibuffer :which-key "switch-to-buffer")
  "bd" '(kill-this-buffer :which-key "kill-buffer")
 
- ;; app
+ ;; apps
  "a" '(:ignore t :which-key "apps")
  "am" '(mu4e :which-key "mu4e")
  "ac" '(calc :which-key "calc")
@@ -63,6 +63,10 @@
  ;; toggle
  "t" '(:ignore t :which-key "toggle")
  "tS" '(flyspell-mode :which-key "spelling")
+
+ ;; spelling
+ "S" '(:ignore t :which-key "spelling")
+ "Sd" '(ispell-change-dictionary :which-key "change dict")
 
  ;; help 
  "h" '(:ignore t :which-key "help")
