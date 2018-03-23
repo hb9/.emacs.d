@@ -1,6 +1,7 @@
 (setq eshell-aliases-file
       (expand-file-name "eshell/eshell_aliases.txt" user-emacs-directory)
       eshell-buffer-maximum-lines 20000)
+
 (setq hb9/shell-counter 0)
 
 (defun hb9/shell-naming ()
@@ -59,7 +60,10 @@
               (evil-define-key 'insert eshell-mode-map
                 (kbd "C-e") 'end-of-line)
               (evil-define-key 'normal eshell-mode-map
-                (kbd "G") 'hb9/eshell-goto-end))))
+                (kbd "G") 'hb9/eshell-goto-end)
+              ;; configure PATH
+              (setq eshell-path-env (concat (expand-file-name "~/.local/bin") ":" eshell-path-env))
+              (setenv "PATH" (concat (expand-file-name "~/.local/bin") ":" (getenv "PATH"))))))
 
 ;; {{ taken from Howard Abrams
 ;; @see http://howardism.org/Technical/Emacs/eshell-present.html
