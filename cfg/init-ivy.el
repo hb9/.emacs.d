@@ -14,10 +14,10 @@
 
 (use-package swiper
   :config
-  (global-set-key "\C-s" 'swiper))
+  (global-set-key (kbd "C-s") 'swiper))
 
 (use-package counsel
   :config
-  (global-set-key "\M-x" 'counsel-M-x))
+  (global-set-key (kbd "M-x") 'counsel-M-x))
 
 (provide 'init-ivy)
