@@ -19,4 +19,6 @@
   :config
   (setq expand-region-contract-fast-key "M-v"))
 
+(add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace t)))
+
 (provide 'init-editing)

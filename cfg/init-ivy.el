@@ -16,4 +16,8 @@
   :config
   (global-set-key "\C-s" 'swiper))
 
+(use-package counsel
+  :config
+  (global-set-key "\M-x" 'counsel-M-x))
+
 (provide 'init-ivy)
