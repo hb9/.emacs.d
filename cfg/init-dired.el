@@ -5,6 +5,7 @@
   :defer t
   :config
   (add-hook 'dired-mode-hook 'dired-hide-details-mode)
+  (setq dired-dwim-target t)
   :general
   (:keymaps 'dired-mode-map
    :prefix hb9/leader-2
