@@ -9,3 +9,5 @@
 *.eld
 /projectile.cache
 /bookmarks
+/session.*
+/tramp
