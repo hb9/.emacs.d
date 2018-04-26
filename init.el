@@ -45,6 +45,7 @@
 
 ;; languages
 (require 'lang-python)
+(require 'lang-scala)
 
 ;; visual appearence
 (require 'init-theme)

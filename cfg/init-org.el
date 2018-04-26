@@ -140,6 +140,7 @@
 
 (setq org-babel-clojure-backend 'cider
       org-babel-python-command "python3"
+      org-confirm-babel-evaluate nil
       org-structure-template-alist (append org-structure-template-alist
                                            '(("sel" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC")
                                              ("sp" "#+BEGIN_SRC python :results output\n?\n#+END_SRC")

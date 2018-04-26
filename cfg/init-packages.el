@@ -61,6 +61,10 @@
 (require-package 'wgrep)
 (require-package 'doom-themes)
 (require-package 'nyan-mode)
+(require-package 'sbt-mode)
+(require-package 'scala-mode)
+(require-package 'flycheck)
+(require-package 'counsel-etags)
 
 ;; load packages
 (package-initialize)
