@@ -6,11 +6,12 @@
   (setq-default evil-default-state 'normal)
   (setq avy-all-windows 'all-frames)
 
-  ;; fix scrolling
+  ;; Fix scrolling and unbind ','-key (reserved for the second leader key)
   (global-set-key (kbd "M-u") 'universal-argument)
   (define-key universal-argument-map (kbd "M-u") 'universal-argument-more)
   (with-eval-after-load 'evil-maps
-    (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up)))
+    (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up)
+    (define-key evil-motion-state-map (kbd ",") nil)))
 
 (use-package evil-nerd-commenter
   :commands

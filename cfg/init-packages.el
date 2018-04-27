@@ -62,9 +62,11 @@
 (require-package 'doom-themes)
 (require-package 'nyan-mode)
 (require-package 'sbt-mode)
+(require-package 'ensime)
 (require-package 'scala-mode)
 (require-package 'flycheck)
 (require-package 'counsel-etags)
+(require-package 'engine-mode)
 
 ;; load packages
 (package-initialize)

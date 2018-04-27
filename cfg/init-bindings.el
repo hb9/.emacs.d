@@ -68,7 +68,7 @@
  "S" '(:ignore t :which-key "spelling")
  "Sd" '(ispell-change-dictionary :which-key "change dict")
 
- ;; help 
+ ;; help
  "h" '(:ignore t :which-key "help")
  "hv" '(counsel-describe-variable :which-key "describe variable")
  "hf" '(counsel-describe-function :which-key "describe function")
