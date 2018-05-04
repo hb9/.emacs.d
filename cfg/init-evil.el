@@ -5,7 +5,7 @@
   (evil-mode 1)
   (setq-default evil-default-state 'normal)
   (setq avy-all-windows 'all-frames)
-
+  (evil-set-initial-state 'ivy-occur-grep-mode 'normal)
   ;; Fix scrolling and unbind ','-key (reserved for the second leader key)
   (global-set-key (kbd "M-u") 'universal-argument)
   (define-key universal-argument-map (kbd "M-u") 'universal-argument-more)
