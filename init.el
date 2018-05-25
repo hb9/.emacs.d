@@ -36,6 +36,7 @@
 
 ;; configure packages
 (require 'init-ivy)
+(require 'init-helm)
 (require 'init-company)
 (require 'init-git)
 (require 'init-org)
@@ -44,6 +45,7 @@
 (require 'init-projectile)
 
 ;; languages
+(require 'lang-lsp)
 (require 'lang-python)
 (require 'lang-scala)
 
