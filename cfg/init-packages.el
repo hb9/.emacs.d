@@ -44,6 +44,8 @@
 (require-package 'flx)
 (require-package 'counsel)
 (require-package 'swiper)
+(require-package 'helm)
+(require-package 'helm-dash)
 (require-package 'hydra)
 (require-package 'ivy-hydra)
 (require-package 'dired-hacks-utils)
@@ -65,8 +67,12 @@
 (require-package 'ensime)
 (require-package 'scala-mode)
 (require-package 'flycheck)
-(require-package 'counsel-etags)
 (require-package 'engine-mode)
+(require-package 'flycheck-tip)
+(require-package 'lsp-mode)
+(require-package 'lsp-ui)
+(require-package 'company-lsp)
+(require-package 'lsp-python)
 
 ;; load packages
 (package-initialize)
