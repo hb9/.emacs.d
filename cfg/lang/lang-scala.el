@@ -2,31 +2,30 @@
 (require 'scala-mode)
 (require 'flycheck)
 (require 'engine-mode)
+(require 'ensime)
 
 (use-package scala-mode
   :config
   (add-hook 'scala-mode-hook 'flycheck-mode)
   :general
   (:keymaps 'scala-mode-map
+            :states '(normal visual)
             :prefix hb9/leader-2
             "s" '(:ignore t :which-key "sbt")
             "ss" '(sbt-start :which-key "start")
             "sr" '(sbt-send-region :which-key "send region")))
 
-(use-package flycheck
+(use-package helm-dash
   :config
-  (setq flycheck-scalastylerc
-        (expand-file-name "script/tools/scalastyle_cfg.xml" hb9/cloud-dir)))
-
-(use-package engine-mode
-  :config
-  (defengine scala-docs
-    "https://www.scala-lang.org/files/archive/api/2.12.3/?search=%s"
-    :browser 'eww-browse-url)
+  (add-hook 'scala-mode-hook '(lambda ()
+          (interactive) (setq-local helm-dash-docsets '("Scala" "Java"))))
   :general
   (:keymaps 'scala-mode-map
+            :states '(normal visual)
             :prefix hb9/leader-2
-            "d" '(engine/search-scala-docs :which-key "docs")))
+            "d" '(:ignore t :which-key "docs")
+            "dd" '(helm-dash :which-key "dash")
+            "dh" '(helm-dash-at-point :which-key "dash here")))
 
 ;; WIP
 ;; I plan to do something similar to this:
