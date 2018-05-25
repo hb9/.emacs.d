@@ -8,7 +8,7 @@
         ("C-l" . ivy-alt-done)
         ("TAB" . ivy-alt-done)
         ("C-SPC" . ivy-call)
-        ("C-m" . ivy-immediate-done))
+        ("C-i" . ivy-immediate-done))
   :init
   (ivy-mode 1)
   (setq ivy-fixed-height-minibuffer t
