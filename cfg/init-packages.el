@@ -73,6 +73,7 @@
 (require-package 'lsp-ui)
 (require-package 'company-lsp)
 (require-package 'lsp-python)
+(require-package 'pyvenv)
 
 ;; load packages
 (package-initialize)
