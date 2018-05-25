@@ -7,4 +7,6 @@
             auto-revert-verbose nil)
 (add-to-list 'global-auto-revert-ignore-modes 'Buffer-menu-mode)
 
+(setq create-lockfiles nil)
+
 (provide 'init-files)
