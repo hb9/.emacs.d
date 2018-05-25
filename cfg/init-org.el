@@ -54,7 +54,7 @@
          :prepend t        ; properties
          :empty-lines 1    ; properties
          :created t        ; properties
-         :immediate-finish
+         :immediate-finish t
          :kill-buffer t)   ; properties
 
         ;; For taking notes on random things
@@ -99,7 +99,7 @@
          :prepend t        ; properties
          :empty-lines 1    ; properties
          :created t        ; properties
-         :immediate-finish
+         :immediate-finish t
          :kill-buffer t)   ; properties
 
         ;; To capture tons of errands
@@ -130,6 +130,7 @@
  'org-babel-load-languages
  '((emacs-lisp . t)
    (python . t)
+   (shell . t)
    (js . t)
    (C . t)
    (dot . t)
