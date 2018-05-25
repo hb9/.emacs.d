@@ -42,7 +42,7 @@
 
  ;; buffers
  "b" '(:ignore t :which-key "buffers")
- "bb" '(counsel-ibuffer :which-key "switch-to-buffer")
+ "bb" '(helm-buffers-list :which-key "switch-to-buffer")
  "bd" '(kill-this-buffer :which-key "kill-buffer")
 
  ;; apps
