@@ -21,13 +21,6 @@
    dired-listing-switches "-alhv"
    dired-omit-files "^\\.\\|^#.#$\\|.~$"))
 
-(use-package dired-subtree
-  :defer t
-  :init
-  (bind-keys
-   :map dired-mode-map
-   ("i" . dired-subtree-toggle)))
-
 (use-package dired-narrow
   :defer t
   :general
