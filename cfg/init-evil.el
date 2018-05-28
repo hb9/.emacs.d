@@ -1,6 +1,8 @@
 (require 'which-key)
 
 (use-package evil
+  :init
+  (setq evil-want-integration nil)
   :config
   (evil-mode 1)
   (setq-default evil-default-state 'normal)
@@ -12,6 +14,13 @@
   (with-eval-after-load 'evil-maps
     (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up)
     (define-key evil-motion-state-map (kbd ",") nil)))
+
+(use-package evil-collection
+  :after evil
+  :config
+  (setq evil-collection-mode-list '(calendar
+                                    dired))
+  (evil-collection-init))
 
 (use-package evil-nerd-commenter
   :commands
@@ -46,5 +55,7 @@
   :general
   (:keymaps 'visual
    "s" '(evil-surround-region :which-key "surround")))
+
+
 
 (provide 'init-evil)

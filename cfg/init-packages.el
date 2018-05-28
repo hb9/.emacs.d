@@ -57,6 +57,7 @@
 (require-package 'smeargle)
 (require-package 'git-gutter-fringe+)
 (require-package 'evil-magit)
+(require-package 'evil-collection)
 (require-package 'eww-lnum)
 (require-package 'projectile)
 (require-package 'ag)
